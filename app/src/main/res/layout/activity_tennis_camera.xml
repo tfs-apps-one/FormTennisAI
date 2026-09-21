@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tennis camera / AR diagnosis screen.
+  Adapted from the baseball app's activity_camera.xml: same FrameLayout
+  Z-stack (preview → skeleton overlay → floating HUD panels), same cyan-on-
+  black HUD styling. The mode row is a 3-way stroke toggle (+ a Backhand
+  grip sub-toggle) instead of a static mode badge, and the bottom panel
+  drives a single guided-swing sequence instead of a timed recording.
+  No AdMob banner — this app has no ads dependency.
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+
+    <!-- ── Layer 1: Camera preview ──────────────────────────────────── -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scaleType="fillCenter" />
+
+    <!-- ── Layer 2: AR Skeleton Overlay ─────────────────────────────── -->
+    <tfsapps.formtennisai.camera.TennisPoseOverlayView
+        android:id="@+id/poseOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- ── Layer 3: Top HUD ──────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/layoutTopHud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_hud_panel"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="32dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#4400CFFF" />
+
+        <!-- Stroke toggle + Help / Switch-camera row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/modeToggleGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedButton="@id/btnServe"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnServe"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/btn_serve"
+                    android:textSize="11sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnForehand"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/btn_forehand"
+                    android:textSize="11sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBackhand"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/btn_backhand"
+                    android:textSize="11sp" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btnSwitchCamera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_hud_panel"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:src="@android:drawable/ic_menu_camera"
+                android:contentDescription="@string/content_desc_switch_camera"
+                android:tint="#FF00E5FF" />
+
+            <ImageButton
+                android:id="@+id/btnHelp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_hud_panel"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:src="@android:drawable/ic_menu_help"
+                android:contentDescription="@string/content_desc_help"
+                android:tint="#FF00E5FF" />
+        </LinearLayout>
+
+        <!-- Backhand grip sub-toggle (visible only when Backhand is selected) -->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/backhandGripToggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            app:checkedButton="@id/btnGripTwo"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGripTwo"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/btn_backhand_two"
+                android:textSize="11sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGripOne"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/btn_backhand_one"
+                android:textSize="11sp" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- Always-visible camera angle instruction — shown regardless of
+             validation state, so the user knows the correct framing
+             BEFORE swinging, not only after a failed detection. -->
+        <TextView
+            android:id="@+id/tvCameraAngleHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_angle_hint"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <!-- Current checkpoint progress -->
+        <TextView
+            android:id="@+id/tvPhaseLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF00E5FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Hint / validation status text -->
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:minLines="2"
+            android:gravity="top|start"
+            android:textColor="#AACCDDEE"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#3300CFFF" />
+    </LinearLayout>
+
+    <!-- ── Layer 4: Bottom HUD ─────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/layoutBottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FF000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutBottomHud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hud_panel"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="#3300CFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLiveScoreLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_live_score"
+                    android:textColor="#8800E5FF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/btnSkipPhase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp"
+                    android:text="@string/btn_skip_phase"
+                    android:textColor="#88AAAAAA"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvLiveScoreNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="#FF00E5FF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pbLiveScore"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#FF00E5FF"
+                android:progressBackgroundTint="#33FFFFFF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAction"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/btn_serve"
+                android:text="@string/btn_start_sequence"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

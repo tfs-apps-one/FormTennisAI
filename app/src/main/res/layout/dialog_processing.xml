@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Stylish "diagnosing" popup shown briefly between the FINISH checkpoint
+  locking in and navigation to the result screen (see
+  TennisCameraActivity.showProcessingDialog()). Replaces the earlier
+  plain AlertDialog.setMessage(...) text popup with a rounded dark card,
+  a cyan Material circular spinner, and a tennis-ball icon at its center —
+  matching the camera screen's cyan-on-black HUD styling instead of the
+  system dialog's default look.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_dialog_card"
+    android:paddingHorizontal="40dp"
+    android:paddingVertical="32dp">
+
+    <FrameLayout
+        android:layout_width="64dp"
+        android:layout_height="64dp">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:indeterminate="true"
+            app:indicatorColor="#FF00E5FF"
+            app:trackColor="#332A3A42"
+            app:trackThickness="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="🎾"
+            android:textSize="22sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvProcessingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/processing_diagnosis"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvProcessingSubMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/processing_diagnosis_sub"
+        android:textColor="#AACCDDEE"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+</LinearLayout>

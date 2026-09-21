@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Prominent, high-contrast banner background for the always-visible
+     camera-angle instruction on the camera screen (see 改善１: the
+     previous version relied on small hint text shown only when
+     detection failed, which users could easily miss and shoot from the
+     wrong angle before ever triggering it). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFD54F" />
+    <corners android:radius="8dp" />
+</shape>

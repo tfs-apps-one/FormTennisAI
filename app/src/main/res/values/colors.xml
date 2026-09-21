@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ── Tennis camera / result screens ──────────────────────────────── -->
+    <color name="home_bg">#FF121212</color>
+    <color name="btn_serve">#FF00B8D4</color>
+    <color name="btn_forehand">#FF7C4DFF</color>
+    <color name="btn_backhand">#FFFF6D00</color>
+    <color name="btn_reset">#FFEF5350</color>
+    <color name="angle_label_text">#FFB0BEC5</color>
+    <color name="skeleton_user">#FF00E676</color>
+    <color name="skeleton_coach">#FF26C6DA</color>
+</resources>

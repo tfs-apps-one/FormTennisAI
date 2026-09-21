@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">AIテニスフォーム診断 - サーブ&amp;スイング改善</string>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Tennis form feedback strings, used by TennisFormScorer.
+         Each criterion has a "strength" line (shown when its score is
+         high) and an "improve" line (shown when its score is low). Each
+         line follows a 3-part shape: (1) what was observed, (2) why it
+         matters for the shot, (3) concrete advice (improve lines) or the
+         benefit being earned (strength lines). TennisFormScorer appends
+         the measured value (and target, for improve lines) after these
+         labels at runtime, so the text itself doesn't need to repeat the
+         raw numbers.
+         ══════════════════════════════════════════════════════════════════ -->
+
+    <!-- Shared READY / stance checkpoint (all modes) -->
+    <string name="tennis_ready_balance_strength">構えの姿勢が安定しています。体が左右にほとんど傾いておらず、どの方向にも素早く動き出せる理想的なポジションです。この安定感を毎回のショットの出発点にしましょう。</string>
+    <string name="tennis_ready_balance_improve">構えで体が左右に傾いています。傾いたままだと軸がぶれて、その後のステップやスイングの再現性が落ちてしまいます。骨盤と肩のラインを地面と垂直に保ち、頭がつま先の真上に来るようまっすぐ立ちましょう。</string>
+
+    <!-- SERVE -->
+    <string name="tennis_serve_trophy_elbow_strength">トロフィーポーズで肘が肩のラインまでしっかり上がっています。肘が肩の高さにあることで、そこからラケットヘッドを大きく加速させる助走が取れ、サーブのパワーとコントロールの両方につながります。この高さを毎回再現しましょう。</string>
+    <string name="tennis_serve_trophy_elbow_improve">トロフィーポーズで肘の高さが足りません。肘が下がったままだとラケットを加速させる距離が短くなり、サーブのスピードが落ちるだけでなく肩への負担も増えます。トスを見上げながら、肘を肩のラインまでしっかり引き上げましょう。</string>
+    <string name="tennis_serve_trophy_knee_strength">トスアップ時の膝の曲げが適切です。130〜150度程度の曲げがあることで地面を蹴る力がしっかり使え、体全体を使ったパワフルなサーブにつながります。</string>
+    <string name="tennis_serve_trophy_knee_improve">膝の曲げが浅い、または深すぎます。曲げが浅いと地面を蹴る力を使えずサーブが手打ちになり、深すぎるとタイミングが崩れやすくなります。130〜150度を目安に、無理のない範囲でしっかり沈み込みましょう。</string>
+    <string name="tennis_serve_impact_elbow_strength">インパクトで腕がしっかり伸びています。肘がほぼ伸びきった状態で捉えることで打点が高くなり、サーブの角度とスピードの両方で有利になります。</string>
+    <string name="tennis_serve_impact_elbow_improve">インパクトで肘が伸びきっていません。肘が曲がったまま当たると打点が低くなり、ネットへの引っかかりやスピード不足の原因になります。トスをやや高めに設定し、腕を最後までしっかり伸ばして最上部でボールを捉えましょう。</string>
+    <string name="tennis_serve_impact_tilt_strength">インパクト時の体の傾きが適切です。ボールに向かって適度に体を伸び上がらせることで、打点の高さと体重の伝わり方のバランスが取れています。</string>
+    <string name="tennis_serve_impact_tilt_improve">インパクト時の体の傾きを調整しましょう。まっすぐ立ちすぎると打点が伸びず、逆に傾きすぎるとバランスを崩してコントロールが乱れます。ボールに向かって軽く伸び上がるイメージで、適度な前傾を作りましょう。</string>
+    <string name="tennis_serve_finish_elbow_strength">フォロースルーで腕が自然に脱力できています。振り切った後に力を抜けると、次のショットへの切り替えがスムーズになり、肩や肘への負担も抑えられます。</string>
+    <string name="tennis_serve_finish_elbow_improve">フォロースルーで腕の力が抜けきっていません。振り切った後も力が入ったままだと動きが硬くなり、肩や肘を痛める原因にもなります。インパクトの後は腕の力を意識的に緩め、振り切った勢いに任せましょう。</string>
+    <string name="tennis_serve_finish_cross_strength">フォロースルーで腕が体の反対側までしっかり振り抜けています。最後まで振り抜くことでラケットヘッドがしっかり加速し、プロネーション（前腕の回内）も自然に起こりやすくなります。</string>
+    <string name="tennis_serve_finish_cross_improve">フォロースルーが不十分です。途中で振りを止めてしまうと加速が抑えられ、サーブのスピードだけでなくプロネーションによる肘への負担軽減も得られません。腕を体の反対側までしっかり振り抜き切りましょう。</string>
+
+    <!-- FOREHAND -->
+    <string name="tennis_fh_turn_twist_strength">ユニットターンで上半身がしっかり捻転しています。肩と腰のラインにしっかり差ができることで、体を戻す力を使ったパワフルなスイングにつながります。</string>
+    <string name="tennis_fh_turn_twist_improve">上半身の捻転が足りません。肩と腰の差が小さいと体をひねり戻す力が使えず、腕だけでボールを押し出す形になってスピードも安定感も出にくくなります。テイクバックで肩のラインを深く回し、腰との差をしっかり作りましょう。</string>
+    <string name="tennis_fh_impact_front_strength">打点が体より前でしっかり捉えられています。体の前方で打てていることで腕を自由に振り抜くスペースが生まれ、パワーと方向性の両方をコントロールしやすくなります。</string>
+    <string name="tennis_fh_impact_front_improve">打点が体に近すぎます。体に近い位置で当たると窮屈になり、腕の振り抜きが制限されてパワーが伝わらず方向も安定しません。ボールを引きつけすぎず、腰（骨盤中心）よりも前方で捉えるタイミングを意識しましょう。</string>
+    <string name="tennis_fh_impact_elbow_strength">インパクトの肘の角度にゆとりがあります。窮屈すぎず伸びきってもいない角度を保てているため、衝撃を吸収しつつしっかり力を伝えられています。</string>
+    <string name="tennis_fh_impact_elbow_improve">インパクトで肘が窮屈、または伸びすぎです。肘が詰まりすぎるとスイングが振り抜けず、伸びすぎると衝撃を吸収できずに手首や肘に負担がかかります。ボールとの距離を調整し、肘に軽いゆとりを持たせた状態で捉えましょう。</string>
+    <string name="tennis_fh_finish_swing_strength">肩越しまでしっかり振り抜けています。最後までスイングを完了させることで、ラケットヘッドの加速を最大限に活かし、スピンやコントロールも安定します。</string>
+    <string name="tennis_fh_finish_swing_improve">フィニッシュで振り抜きが小さいです。途中でスイングを止めてしまうとラケットヘッドの加速を活かしきれず、ボールへの回転やパワーも不足しがちです。インパクト後も減速せず、肩越しまでラケットを振り抜きましょう。</string>
+
+    <!-- BACKHAND（両手） -->
+    <string name="tennis_bh2_turn_lower_strength">下半身主導でしっかりターンできています。腰から先に回転を始められているため、上半身に余計な力みが入らず、安定して大きなパワーを生み出せています。</string>
+    <string name="tennis_bh2_turn_lower_improve">下半身のターンが不足しています。上半身だけでひねろうとすると再現性が下がり、パワーも頭打ちになりやすくなります。テイクバックでは腰から先に回転を開始し、肩がそれに続く形を意識しましょう。</string>
+    <string name="tennis_bh2_impact_elbow_strength">両手の肘の角度が安定しています。コンパクトな腕の形を保てているため、体の回転をそのままラケットに伝えやすく、ミートポイントもぶれにくくなっています。</string>
+    <string name="tennis_bh2_impact_elbow_improve">インパクトで両肘の角度が崩れています。腕が伸びすぎたり縮こまったりすると体の回転がラケットにうまく伝わらず、ミートポイントも安定しません。両腕でコンパクトな三角形を保つイメージでインパクトを迎えましょう。</string>
+    <string name="tennis_bh2_finish_chest_strength">フィニッシュで胸がしっかり回転しています。打球方向まで体をしっかり向けられているため、体の回転の力を最後まで使い切れています。</string>
+    <string name="tennis_bh2_finish_chest_improve">フィニッシュでの体の回転が足りません。回転が途中で止まると体の力を使い切れず、腕の力だけに頼ったショットになりやすくなります。インパクト後も胸を打球方向へ向け続けるつもりで振り切りましょう。</string>
+
+    <!-- BACKHAND（片手） -->
+    <string name="tennis_bh1_turn_twist_strength">片手バックハンドのユニットターンができています。肩をしっかり入れてテイクバックできているため、そこから体を開放する力を使った鋭いスイングにつながります。</string>
+    <string name="tennis_bh1_turn_twist_improve">テイクバックの捻転が足りません。肩の入りが浅いと体を開放する力を使えず、腕だけで押し出すような弱いショットになりがちです。テイクバックでは肩をしっかり深く入れ、打球方向に対して体を閉じた状態を作りましょう。</string>
+    <string name="tennis_bh1_impact_chest_strength">インパクトで体幹の開きを抑えられています。胸が早く開きすぎていないことで、腕とラケットがしっかり打球方向へ向いた状態で当てられています。</string>
+    <string name="tennis_bh1_impact_chest_improve">インパクトで体が開きすぎています。胸が早く打球方向を向いてしまうとラケット面も一緒に開いて、ボールが浮いたり流れたりしやすくなります。インパクトの瞬間まで胸を横向きのまま我慢し、開くのを少し遅らせましょう。</string>
+    <string name="tennis_bh1_impact_elbow_lock_strength">インパクトで肘がしっかりロックされ安定しています。腕が伸びた状態を保てているため、体の回転の力がロスなくラケットに伝わっています。</string>
+    <string name="tennis_bh1_impact_elbow_lock_improve">インパクトで肘が安定していません。肘が曲がった状態で当たると衝撃を吸収しきれず、力もラケットにうまく伝わりません。インパクトに向けて腕をしっかり伸ばし、肘をロックした状態を作りましょう。</string>
+    <string name="tennis_bh1_finish_swing_strength">フィニッシュまでしっかり振り抜けています。最後までスイングを完了させることで、片手バックハンド特有の鋭いスピンとパワーを引き出せています。</string>
+    <string name="tennis_bh1_finish_swing_improve">振り抜きが小さいです。途中でスイングを止めてしまうと片手バックハンドの持ち味であるスピンとパワーを十分に引き出せません。インパクト後も減速せず、フィニッシュまでしっかりラケットを振り抜きましょう。</string>
+
+    <!-- Fallbacks, mirrors baseball's feedback_keep_practicing / feedback_fine_tune -->
+    <string name="tennis_feedback_keep_practicing">その調子で練習を続けましょう</string>
+    <string name="tennis_feedback_fine_tune">細かい部分を調整するとさらに良くなります</string>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Criterion display names (result screen breakdown row headers).
+         Short Japanese labels — previously these were auto-generated from
+         the CriterionId enum constant name and showed up in English
+         (e.g. "Serve Trophy Elbow") even on a Japanese device.
+         ══════════════════════════════════════════════════════════════════ -->
+    <string name="criterion_ready_balance">バランス</string>
+    <string name="criterion_serve_trophy_elbow">肘の高さ</string>
+    <string name="criterion_serve_trophy_knee">膝の曲げ</string>
+    <string name="criterion_serve_impact_elbow">肘の伸び</string>
+    <string name="criterion_serve_impact_tilt">体の傾き</string>
+    <string name="criterion_serve_finish_elbow">腕の脱力</string>
+    <string name="criterion_serve_finish_cross">振り抜き</string>
+    <string name="criterion_fh_turn_twist">上半身の捻転</string>
+    <string name="criterion_fh_impact_front">打点の位置</string>
+    <string name="criterion_fh_impact_elbow">肘の角度</string>
+    <string name="criterion_fh_finish_swing">振り抜き</string>
+    <string name="criterion_bh2_turn_lower">下半身のターン</string>
+    <string name="criterion_bh2_impact_elbow">両肘の角度</string>
+    <string name="criterion_bh2_finish_chest">胸の回転</string>
+    <string name="criterion_bh1_turn_twist">テイクバックの捻転</string>
+    <string name="criterion_bh1_impact_chest">体の開き</string>
+    <string name="criterion_bh1_impact_elbow_lock">肘のロック</string>
+    <string name="criterion_bh1_finish_swing">振り抜き</string>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Camera / Result screen UI strings
+         ══════════════════════════════════════════════════════════════════ -->
+
+    <string name="permission_required">カメラの使用が許可されなかったため終了します</string>
+
+    <!-- Stroke toggle -->
+    <string name="btn_serve">サーブ</string>
+    <string name="btn_forehand">フォアハンド</string>
+    <string name="btn_backhand">バックハンド</string>
+    <string name="btn_backhand_two">両手</string>
+    <string name="btn_backhand_one">片手</string>
+
+    <!-- Sequence controls -->
+    <string name="btn_start_sequence">開始</string>
+    <string name="btn_reset_sequence">リセット</string>
+    <string name="btn_skip_phase">この項目をスキップ</string>
+    <string name="label_live_score">LIVE SCORE</string>
+
+    <!-- Hints -->
+    <string name="hint_no_human">カメラに全身が映るように立ってください</string>
+    <string name="hint_checkpoint_valid">その姿勢のままキープしてください…</string>
+    <string name="camera_hint_serve">「開始」を押してから、サーブを1回通しで打ってください</string>
+    <string name="camera_hint_forehand">「開始」を押してから、フォアハンドを1回通しで打ってください</string>
+    <string name="camera_hint_backhand">「開始」を押してから、バックハンドを1回通しで打ってください</string>
+    <string name="hint_wrong_pose_serve">サーブの構え〜トロフィーポーズが検出できません。横向きに立ってください</string>
+    <string name="hint_wrong_pose_forehand">フォアハンドのフォームが検出できません。カメラに正面またはうしろ向きで立ってください（真横からはNG）</string>
+    <string name="hint_wrong_pose_backhand">バックハンドのフォームが検出できません。カメラに正面またはうしろ向きで立ってください（真横からはNG）</string>
+
+    <!-- Detection error / processing popups -->
+    <string name="error_title">エラー</string>
+    <string name="processing_diagnosis">診断中…</string>
+    <string name="processing_diagnosis_sub">フォームを解析しています…</string>
+    <string name="camera_init_failed">カメラの初期化に失敗しました</string>
+    <string name="camera_not_found">カメラが見つかりません</string>
+    <string name="back_camera_not_found">バックカメラが見つかりません</string>
+
+    <!-- Always-visible camera angle instruction, shown on TennisCameraActivity
+         BEFORE the user swings so they don't shoot from the wrong angle by
+         accident. This is genuinely mode-dependent (see
+         TennisPoseValidator's class javadoc for the full reasoning):
+           - SERVE is judged side-on, the same reason a pitcher's throwing
+             motion is filmed from the side — every SERVE checkpoint only
+             ever compares vertical (Y-axis) positions or a single limb's
+             2D joint angle, none of which need left/right separation.
+           - FOREHAND / BACKHAND need the camera on the player's front-back
+             axis — either facing the player OR filming their back from
+             behind both work equally (confirmed against real match
+             footage filmed from behind), because both keep the
+             shoulder/hip line's left-right (X-axis) separation visible,
+             which the "unit turn" and "impact position" checks rely on.
+             Only a true side/profile shot breaks them, by collapsing that
+             separation to near zero — so the string below intentionally
+             says "front or behind", not "front" alone. The resource name
+             kept below ("_front") is a legacy identifier only; the
+             displayed text covers both angles. -->
+    <string name="camera_angle_hint_serve">📷 サーブは身体の真横からカメラを構えてください（横向き撮影）</string>
+    <string name="camera_angle_hint_front">📷 カメラに正面またはうしろ向きで構えてください（真横からはNG）。全身が画面に入るようにしてください</string>
+
+    <!-- Help dialog -->
+    <string name="help_title">使い方</string>
+    <string name="help_body">①「サーブ」「フォアハンド」「バックハンド」からモードを選びます。\n②「開始」を押してから、選んだショットを1回通しで打ちます。\n③ 構え → テイクバック/トロフィーポーズ → インパクト → フィニッシュ の4つのチェックポイントが自動的に検出され、順番にスコアが記録されます。\n④ 検出されない項目は「この項目をスキップ」で次に進めます。</string>
+
+    <!-- Accessibility -->
+    <string name="content_desc_switch_camera">カメラ切り替え</string>
+    <string name="content_desc_help">ヘルプ</string>
+
+    <!-- Result screen -->
+    <string name="result_title">診断結果</string>
+    <string name="label_avg_score">総合スコア</string>
+    <string name="result_phase_scores">チェックポイント別スコア</string>
+    <string name="result_worst_phase">（要改善）</string>
+    <string name="result_details">詳細</string>
+    <string name="result_strengths">良い点</string>
+    <string name="result_improvements">改善点</string>
+    <string name="result_no_data">この項目のデータはありません</string>
+    <string name="btn_try_again">もう一度</string>
+
+    <!-- Per-checkpoint one-line summary, shown at the top of the selected
+         checkpoint's detail panel (above the skeleton comparison and the
+         breakdown), based on that checkpoint's overall score. %1$s is the
+         checkpoint's display name (e.g. "インパクト"). -->
+    <string name="phase_summary_excellent">%1$sは非常に良いフォームです！この調子をキープしましょう</string>
+    <string name="phase_summary_good">%1$sは全体的に良好です</string>
+    <string name="phase_summary_fair">%1$sは基本はできていますが、まだ伸びしろがあります</string>
+    <string name="phase_summary_needs_work">%1$sは重点的に練習すると大きく上達しそうです</string>
+
+    <!-- Mode display names / phase labels (TennisFormMode) -->
+    <string name="mode_display_serve">サーブ</string>
+    <string name="mode_display_forehand">フォアハンド</string>
+    <string name="mode_display_backhand_two">バックハンド（両手）</string>
+    <string name="mode_display_backhand_one">バックハンド（片手）</string>
+    <string name="serve_phase_ready">構え（スタンス）</string>
+    <string name="serve_phase_turn">トロフィーポーズ</string>
+    <string name="serve_phase_impact">インパクト（最上部打点）</string>
+    <string name="serve_phase_finish">フィニッシュ（フォロースルー）</string>
+    <string name="groundstroke_phase_ready">構え（レディポジション）</string>
+    <string name="groundstroke_phase_turn">ユニットターン</string>
+    <string name="groundstroke_phase_impact">インパクト（打点）</string>
+    <string name="groundstroke_phase_finish">フィニッシュ（振り抜き）</string>
+
+    <!-- Skeleton comparison view (result screen) -->
+    <string name="skeleton_no_data">この項目はスキップされたため記録がありません</string>
+    <string name="legend_you">あなた</string>
+    <string name="legend_coach">コーチ</string>
+    <string name="phase_not_detected">この項目は検出できませんでした</string>
+
+    <!-- Generated default layout placeholder -->
+    <string name="hello_world">こんにちは、世界！</string>
+</resources>

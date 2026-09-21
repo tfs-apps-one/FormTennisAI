@@ -1,0 +1,201 @@
+<resources>
+    <!-- Default (English) strings. Shown on any device whose system language
+         is not Japanese. Japanese-locale devices get values-ja/strings.xml
+         instead — see that file for the Japanese text. Every user-facing
+         string in the app is defined in both files under the same name. -->
+    <string name="app_name">Tennis AI: Serve &amp; Swing Coach</string>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Tennis form feedback strings, used by TennisFormScorer.
+         Each criterion has a "strength" line (shown when its score is
+         high) and an "improve" line (shown when its score is low). Each
+         line follows a 3-part shape: (1) what was observed, (2) why it
+         matters for the shot, (3) concrete advice (improve lines) or the
+         benefit being earned (strength lines). TennisFormScorer appends
+         the measured value (and target, for improve lines) after these
+         labels at runtime, so the text itself doesn't need to repeat the
+         raw numbers.
+         ══════════════════════════════════════════════════════════════════ -->
+
+    <!-- Shared READY / stance checkpoint (all modes) -->
+    <string name="tennis_ready_balance_strength">Your stance is stable and well balanced. Your body barely leans to either side, putting you in an ideal ready position to move quickly in any direction. Use this as the reliable starting point for every shot.</string>
+    <string name="tennis_ready_balance_improve">You\'re leaning side to side in your stance. Starting from an off-balance position throws off your base and makes your steps and swing harder to repeat consistently. Keep your hips and shoulders level and vertical, with your head stacked over your feet.</string>
+
+    <!-- SERVE -->
+    <string name="tennis_serve_trophy_elbow_strength">Your elbow reaches shoulder height in the trophy pose. Getting your elbow up to shoulder level gives the racket head more room to accelerate from there, which helps both the power and control of your serve. Aim to repeat this same height every time.</string>
+    <string name="tennis_serve_trophy_elbow_improve">Your elbow isn\'t high enough in the trophy pose. A low elbow shortens the distance the racket has to accelerate, which costs you serve speed and puts extra strain on your shoulder. Look up at the toss and drive your elbow all the way up to shoulder height.</string>
+    <string name="tennis_serve_trophy_knee_strength">Your knee bend during the toss is well judged. A bend of roughly 130-150 degrees lets you drive off the ground and put your whole body\'s power into the serve.</string>
+    <string name="tennis_serve_trophy_knee_improve">Your knee bend is too shallow or too deep. Too shallow and you lose the leg drive that powers the serve, leaving it arm-only; too deep and your timing tends to fall apart. Sink into a comfortable 130-150 degree bend before you push up.</string>
+    <string name="tennis_serve_impact_elbow_strength">Your arm is fully extended at impact. Meeting the ball with the elbow nearly straight raises your contact point, which helps both the angle and the speed of your serve.</string>
+    <string name="tennis_serve_impact_elbow_improve">Your elbow isn\'t fully extended at impact. Contacting the ball with a bent elbow lowers your contact point, a common cause of hitting the net or losing pace. Toss slightly higher and reach all the way up so you meet the ball at full extension.</string>
+    <string name="tennis_serve_impact_tilt_strength">Your body tilt at impact is well judged. Stretching moderately up and toward the ball like this balances contact height with how well your body weight transfers into the shot.</string>
+    <string name="tennis_serve_impact_tilt_improve">Adjust your body tilt at impact. Staying too upright limits how high you reach, while leaning too far throws off your balance and control. Aim for a moderate forward stretch upward toward the ball, not straight up and not collapsed forward.</string>
+    <string name="tennis_serve_finish_elbow_strength">Your arm relaxes naturally through the follow-through. Letting go of tension after the swing makes it easier to reset for the next shot and reduces strain on your shoulder and elbow.</string>
+    <string name="tennis_serve_finish_elbow_improve">Your arm isn\'t relaxing fully. Staying tense after contact stiffens your motion and can lead to shoulder or elbow strain over time. Consciously release your arm right after impact and let the swing\'s own momentum carry it through.</string>
+    <string name="tennis_serve_finish_cross_strength">Your arm swings all the way across your body on the follow-through. Finishing the swing fully lets the racket head accelerate through contact and lets natural forearm pronation happen, which also protects your arm.</string>
+    <string name="tennis_serve_finish_cross_improve">Your follow-through is cut short. Stopping the swing early caps your racket-head speed and skips the natural pronation that both adds pace and protects your elbow. Let your arm swing all the way through to the opposite side of your body.</string>
+
+    <!-- FOREHAND -->
+    <string name="tennis_fh_turn_twist_strength">Your upper body rotates well through the unit turn. The clear gap between your shoulder and hip lines lets you unwind that stored rotation into a powerful, efficient swing.</string>
+    <string name="tennis_fh_turn_twist_improve">Your upper body isn\'t rotating enough. A small gap between your shoulders and hips means you have no stored rotation to unwind, so you end up pushing the ball with just your arm, which costs both power and consistency. Turn your shoulders further back on the takeback to open a real gap against your hips.</string>
+    <string name="tennis_fh_impact_front_strength">You\'re meeting the ball well out in front of your body. Contacting it out front gives your arm room to swing freely through the ball, which helps both your power and your directional control.</string>
+    <string name="tennis_fh_impact_front_improve">You\'re contacting the ball too close to your body. Hitting it late and close cramps your swing, robbing you of power and making direction harder to control. Let the ball travel a little less before you hit it, meeting it further in front of your hips.</string>
+    <string name="tennis_fh_impact_elbow_strength">Your elbow angle at impact has good margin. Neither too cramped nor too straight, this angle absorbs impact well while still transferring power efficiently.</string>
+    <string name="tennis_fh_impact_elbow_improve">Your elbow is too cramped, or too straight, at impact. A cramped elbow chokes your swing, while a fully straight one can\'t absorb the shock and puts stress on your wrist and elbow. Adjust your distance to the ball so your elbow keeps a comfortable amount of bend at contact.</string>
+    <string name="tennis_fh_finish_swing_strength">You swing all the way through to over your shoulder. Completing the swing this fully lets you use the racket head\'s full acceleration, which keeps your spin and control consistent.</string>
+    <string name="tennis_fh_finish_swing_improve">Your finish is cut short. Stopping the swing partway wastes the racket head\'s acceleration and tends to leave you short on spin and pace. Keep swinging without decelerating after contact, all the way through to over your shoulder.</string>
+
+    <!-- BACKHAND (two-handed) -->
+    <string name="tennis_bh2_turn_lower_strength">Your lower body is leading the turn well. Starting the rotation from your hips takes unnecessary tension out of your upper body while still producing plenty of stable power.</string>
+    <string name="tennis_bh2_turn_lower_improve">Your lower body isn\'t turning enough. Twisting mostly from the upper body is harder to repeat and caps how much power you can generate. On the takeback, start the rotation from your hips first and let your shoulders follow.</string>
+    <string name="tennis_bh2_impact_elbow_strength">Both elbow angles are stable at impact. Keeping this compact arm shape transfers your body rotation straight into the racket and keeps your contact point consistent.</string>
+    <string name="tennis_bh2_impact_elbow_improve">Your elbow angles break down at impact. Letting your arms overextend or collapse breaks the connection between your body turn and the racket, and your contact point drifts around. Keep a compact triangle shape with both arms through contact.</string>
+    <string name="tennis_bh2_finish_chest_strength">Your chest rotates well through the finish. Turning your body fully toward the target lets you use all of your rotational power right through to the end of the swing.</string>
+    <string name="tennis_bh2_finish_chest_improve">Your body isn\'t rotating enough at the finish. Stopping the rotation partway leaves power on the table and shifts the load onto your arm alone. Keep turning your chest toward the target after contact instead of stopping the rotation early.</string>
+
+    <!-- BACKHAND (one-handed) -->
+    <string name="tennis_bh1_turn_twist_strength">Your one-handed backhand unit turn looks good. Turning your shoulder fully on the takeback sets you up to unleash that stored rotation into a sharp, powerful swing.</string>
+    <string name="tennis_bh1_turn_twist_improve">You\'re not rotating enough on the takeback. A shallow shoulder turn means you have no stored rotation to release, so you end up pushing the ball with your arm alone. Turn your shoulder fully on the takeback so your body is closed to the target before you swing.</string>
+    <string name="tennis_bh1_impact_chest_strength">You\'re keeping your torso from opening up too early at impact. Because your chest hasn\'t turned to face the target yet, your racket face stays square through contact.</string>
+    <string name="tennis_bh1_impact_chest_improve">Your body is opening up too much at impact. When your chest turns to face the target too early, the racket face opens with it and the ball tends to float or drift wide. Hold your chest sideways a little longer and delay opening it until just after contact.</string>
+    <string name="tennis_bh1_impact_elbow_lock_strength">Your elbow is locked in and stable at impact. Keeping your arm extended like this transfers your body\'s rotational power into the racket with no energy lost along the way.</string>
+    <string name="tennis_bh1_impact_elbow_lock_improve">Your elbow isn\'t stable at impact. Meeting the ball with a bent elbow absorbs the shock poorly and loses power on the way to the racket. Extend your arm fully into contact so the elbow locks and stays stable.</string>
+    <string name="tennis_bh1_finish_swing_strength">You swing all the way through to the finish. Completing the swing fully brings out the sharp spin and power that a one-handed backhand can generate.</string>
+    <string name="tennis_bh1_finish_swing_improve">Your swing is cut short. Stopping partway through keeps you from getting the spin and power a one-handed backhand is capable of. Keep swinging without slowing down after contact, all the way through to the finish.</string>
+
+    <!-- Fallbacks, mirrors baseball's feedback_keep_practicing / feedback_fine_tune -->
+    <string name="tennis_feedback_keep_practicing">Keep practicing at this level</string>
+    <string name="tennis_feedback_fine_tune">Fine-tune the details and you\'ll improve even more</string>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Criterion display names (result screen breakdown row headers).
+         ══════════════════════════════════════════════════════════════════ -->
+    <string name="criterion_ready_balance">Balance</string>
+    <string name="criterion_serve_trophy_elbow">Elbow Height</string>
+    <string name="criterion_serve_trophy_knee">Knee Bend</string>
+    <string name="criterion_serve_impact_elbow">Arm Extension</string>
+    <string name="criterion_serve_impact_tilt">Body Tilt</string>
+    <string name="criterion_serve_finish_elbow">Arm Relaxation</string>
+    <string name="criterion_serve_finish_cross">Follow-Through</string>
+    <string name="criterion_fh_turn_twist">Upper Body Rotation</string>
+    <string name="criterion_fh_impact_front">Contact Point</string>
+    <string name="criterion_fh_impact_elbow">Elbow Angle</string>
+    <string name="criterion_fh_finish_swing">Follow-Through</string>
+    <string name="criterion_bh2_turn_lower">Lower Body Turn</string>
+    <string name="criterion_bh2_impact_elbow">Elbow Angles</string>
+    <string name="criterion_bh2_finish_chest">Chest Rotation</string>
+    <string name="criterion_bh1_turn_twist">Takeback Rotation</string>
+    <string name="criterion_bh1_impact_chest">Body Opening</string>
+    <string name="criterion_bh1_impact_elbow_lock">Elbow Lock</string>
+    <string name="criterion_bh1_finish_swing">Follow-Through</string>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Camera / Result screen UI strings
+         ══════════════════════════════════════════════════════════════════ -->
+
+    <string name="permission_required">Closing the app because camera access wasn\'t granted</string>
+
+    <!-- Stroke toggle -->
+    <string name="btn_serve">Serve</string>
+    <string name="btn_forehand">Forehand</string>
+    <string name="btn_backhand">Backhand</string>
+    <string name="btn_backhand_two">Two-Handed</string>
+    <string name="btn_backhand_one">One-Handed</string>
+
+    <!-- Sequence controls -->
+    <string name="btn_start_sequence">Start</string>
+    <string name="btn_reset_sequence">Reset</string>
+    <string name="btn_skip_phase">Skip This Checkpoint</string>
+    <string name="label_live_score">LIVE SCORE</string>
+
+    <!-- Hints -->
+    <string name="hint_no_human">Stand so your whole body is in frame</string>
+    <string name="hint_checkpoint_valid">Hold that position…</string>
+    <string name="camera_hint_serve">Tap "Start", then hit one full serve</string>
+    <string name="camera_hint_forehand">Tap "Start", then hit one full forehand</string>
+    <string name="camera_hint_backhand">Tap "Start", then hit one full backhand</string>
+    <string name="hint_wrong_pose_serve">Can\'t detect your serve stance through trophy pose. Try standing side-on to the camera</string>
+    <string name="hint_wrong_pose_forehand">Can\'t detect your forehand form. Face the camera or turn your back to it (not a pure side view)</string>
+    <string name="hint_wrong_pose_backhand">Can\'t detect your backhand form. Face the camera or turn your back to it (not a pure side view)</string>
+
+    <!-- Detection error / processing popups -->
+    <string name="error_title">Error</string>
+    <string name="processing_diagnosis">Analyzing…</string>
+    <string name="processing_diagnosis_sub">Analyzing your form…</string>
+    <string name="camera_init_failed">Failed to initialize the camera</string>
+    <string name="camera_not_found">No camera found</string>
+    <string name="back_camera_not_found">No back camera found</string>
+
+    <!-- Always-visible camera angle instruction, shown on TennisCameraActivity
+         BEFORE the user swings so they don't shoot from the wrong angle by
+         accident. This is genuinely mode-dependent (see
+         TennisPoseValidator's class javadoc for the full reasoning):
+           - SERVE is judged side-on, the same reason a pitcher's throwing
+             motion is filmed from the side — every SERVE checkpoint only
+             ever compares vertical (Y-axis) positions or a single limb's
+             2D joint angle, none of which need left/right separation.
+           - FOREHAND / BACKHAND need the camera on the player's front-back
+             axis — either facing the player OR filming their back from
+             behind both work equally (confirmed against real match
+             footage filmed from behind), because both keep the
+             shoulder/hip line's left-right (X-axis) separation visible,
+             which the "unit turn" and "impact position" checks rely on.
+             Only a true side/profile shot breaks them, by collapsing that
+             separation to near zero — so the string below intentionally
+             says "front or behind", not "front" alone. The resource name
+             kept below ("_front") is a legacy identifier only; the
+             displayed text covers both angles. -->
+    <string name="camera_angle_hint_serve">📷 Hold the camera side-on to your body for the serve (film from the side)</string>
+    <string name="camera_angle_hint_front">📷 Hold the camera facing you or behind you (not a pure side view). Keep your whole body in frame</string>
+
+    <!-- Help dialog -->
+    <string name="help_title">How to Use</string>
+    <string name="help_body">① Choose a mode: Serve, Forehand, or Backhand.\n② Tap "Start", then hit the chosen shot once, all the way through.\n③ Four checkpoints — Ready → Takeback/Trophy Pose → Impact → Finish — are detected automatically and scored in order.\n④ If a checkpoint isn\'t detected, tap "Skip This Checkpoint" to move on.</string>
+
+    <!-- Accessibility -->
+    <string name="content_desc_switch_camera">Switch camera</string>
+    <string name="content_desc_help">Help</string>
+
+    <!-- Result screen -->
+    <string name="result_title">Diagnosis Results</string>
+    <string name="label_avg_score">Overall Score</string>
+    <string name="result_phase_scores">Score by Checkpoint</string>
+    <string name="result_worst_phase">(Needs Work)</string>
+    <string name="result_details">Details</string>
+    <string name="result_strengths">Strengths</string>
+    <string name="result_improvements">Areas to Improve</string>
+    <string name="result_no_data">No data for this checkpoint</string>
+    <string name="btn_try_again">Try Again</string>
+
+    <!-- Per-checkpoint one-line summary, shown at the top of the selected
+         checkpoint's detail panel (above the skeleton comparison and the
+         breakdown), based on that checkpoint's overall score. %1$s is the
+         checkpoint's display name (e.g. "Impact"). -->
+    <string name="phase_summary_excellent">%1$s looks excellent! Keep up this form</string>
+    <string name="phase_summary_good">%1$s looks good overall</string>
+    <string name="phase_summary_fair">%1$s has the basics down, with room to grow</string>
+    <string name="phase_summary_needs_work">%1$s would benefit most from focused practice</string>
+
+    <!-- Mode display names / phase labels (TennisFormMode) -->
+    <string name="mode_display_serve">Serve</string>
+    <string name="mode_display_forehand">Forehand</string>
+    <string name="mode_display_backhand_two">Backhand (Two-Handed)</string>
+    <string name="mode_display_backhand_one">Backhand (One-Handed)</string>
+    <string name="serve_phase_ready">Stance</string>
+    <string name="serve_phase_turn">Trophy Pose</string>
+    <string name="serve_phase_impact">Impact (Contact Point)</string>
+    <string name="serve_phase_finish">Finish (Follow-Through)</string>
+    <string name="groundstroke_phase_ready">Ready Position</string>
+    <string name="groundstroke_phase_turn">Unit Turn</string>
+    <string name="groundstroke_phase_impact">Impact (Contact Point)</string>
+    <string name="groundstroke_phase_finish">Finish (Follow-Through)</string>
+
+    <!-- Skeleton comparison view (result screen) -->
+    <string name="skeleton_no_data">This checkpoint was skipped, so there\'s nothing recorded</string>
+    <string name="legend_you">You</string>
+    <string name="legend_coach">Coach</string>
+    <string name="phase_not_detected">This checkpoint couldn\'t be detected</string>
+
+    <!-- Generated default layout placeholder -->
+    <string name="hello_world">Hello, World!</string>
+</resources>

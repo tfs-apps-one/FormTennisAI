@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simple translucent-black panel background used behind the camera
+     screen's HUD panels and round icon buttons. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#CC000000" />
+    <corners android:radius="10dp" />
+</shape>
